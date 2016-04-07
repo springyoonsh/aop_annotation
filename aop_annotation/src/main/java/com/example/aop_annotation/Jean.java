@@ -6,9 +6,8 @@ import org.springframework.stereotype.Service;
 public class Jean implements Cloth
 {
 	@Override
-	public void weaving() 
+	public void join(String param) 
 	{
-		System.out.println("청바지 무릎부분 박음질중...");		
-	}
-	
+		System.out.println("청바지 구멍을 천으로 박음질중...");		
+	}	
 }

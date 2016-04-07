@@ -9,11 +9,14 @@ import org.springframework.stereotype.Service;
 @Aspect
 public class MyAspect 
 {
-	// 이부분 전체를 수선천advice
-	@Before(" execution(* com.example.aop_annotation.*.weaving*(..)) ")
+	// advice 조각천 
+	@Before(" execution(* com.example.aop_annotation.Jean.join*(..)) ") //안쪽 pointcut
 	public void before(JoinPoint joinpoint)
 	{
 		System.out.println("before...");
-		System.out.println ( joinpoint.getSignature().toShortString() );
+		
+		Object[] arr = joinpoint.getArgs();
+		
+		System.out.println( arr[0] );
 	}
 }

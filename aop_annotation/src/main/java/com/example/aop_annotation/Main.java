@@ -9,6 +9,7 @@ public class Main
 	{
 		ApplicationContext ctx = new ClassPathXmlApplicationContext("aop_annotation.xml");
 		Cloth jean = (Cloth)ctx.getBean("jean");
-		jean.weaving();
+		jean.join("Áß±¹»ê");
 	}
-}	
+
+}
